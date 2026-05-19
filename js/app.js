@@ -265,20 +265,42 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerText = "Sending...";
 
-      // Simulate API/Server request delay
-      setTimeout(() => {
-        contactForm.reset();
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let resJson = await response.json();
+        if (response.status === 200) {
+          // Show success message with dynamic visual class
+          formSuccess.classList.add('active');
+          contactForm.reset();
+        } else {
+          console.error(response);
+          alert(resJson.message || "Form submission failed. Please try again.");
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Failed to send message. Please check your internet connection.");
+      })
+      .then(() => {
         submitBtn.disabled = false;
         submitBtn.innerText = "Send Message";
-        
-        // Show success message with dynamic visual class
-        formSuccess.classList.add('active');
         
         // Auto-hide success message after 5 seconds
         setTimeout(() => {
           formSuccess.classList.remove('active');
         }, 5000);
-      }, 1200);
+      });
     });
   }
 });
