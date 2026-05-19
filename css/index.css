@@ -1225,6 +1225,12 @@ em {
   margin-top: 40px;
 }
 
+.last-updated-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .characters-grid {
