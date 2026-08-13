@@ -1225,7 +1225,8 @@ em {
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  opacity: 0.8;
 }
 
 .footer-links a:hover {
@@ -1239,13 +1240,15 @@ em {
 
 .copyright-text {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  opacity: 0.8;
   margin-top: 40px;
 }
 
 .last-updated-text {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  opacity: 0.8;
   margin-top: 8px;
 }
 
