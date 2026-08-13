@@ -315,7 +315,7 @@ em {
   height: 100vh;
   min-height: 600px;
   position: relative;
-  background-image: url('../assets/hero_bg.png');
+  background-image: url('../images/hero_farmland_canal.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -386,9 +386,13 @@ em {
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.about-text-wrapper {
+  grid-column: 2;
 }
 
 .about-image-wrapper {
@@ -397,6 +401,20 @@ em {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   border: 1px solid var(--glass-border);
+}
+
+.about-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1.5;
+  background: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .about-image {
@@ -777,7 +795,7 @@ em {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://img1.wsimg.com/isteam/ip/25c80e0c-0757-4c39-a570-2e290b42bc79/Orla%20and%20the%20Stranger-37f2428.jpg');
+  background-image: url('../images/hero_farmland_canal.jpg');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -1255,6 +1273,9 @@ em {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .about-text-wrapper {
+    grid-column: 1;
   }
   .notes-quotes-grid {
     grid-template-columns: 1fr;
