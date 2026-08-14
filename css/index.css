@@ -315,7 +315,7 @@ em {
   height: 100vh;
   min-height: 600px;
   position: relative;
-  background-image: url('../images/hero_farmland_canal.jpg');
+  background-image: url('../images/hero_final.jpeg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -795,7 +795,7 @@ em {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/hero_farmland_canal.jpg');
+  background-image: url('../images/hero_final.jpeg');
   background-size: cover;
   background-position: center;
   z-index: 1;
