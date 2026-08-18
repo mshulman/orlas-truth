@@ -998,7 +998,7 @@ em {
   font-weight: 300;
   font-style: italic;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .bios-accordion-wrapper {
