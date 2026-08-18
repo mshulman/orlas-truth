@@ -385,14 +385,12 @@ em {
 
 /* About Section */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  display: block;
 }
 
 .about-text-wrapper {
-  grid-column: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-image-wrapper {
@@ -1272,13 +1270,6 @@ em {
   }
   .hero-title {
     font-size: 3.2rem;
-  }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-text-wrapper {
-    grid-column: 1;
   }
   .notes-quotes-grid {
     grid-template-columns: 1fr;
